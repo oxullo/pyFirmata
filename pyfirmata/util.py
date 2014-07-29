@@ -33,6 +33,7 @@ class Iterator(threading.Thread):
     def __init__(self, board):
         super(Iterator, self).__init__()
         self.board = board
+        self.setDaemon(True)
 
     def run(self):
         while 1:
